@@ -7,7 +7,7 @@ Summary:        Mistral-common is a library of common utilities for Mistral AI.
 # Check if the automatically generated License and its spelling is correct for Fedora
 # https://docs.fedoraproject.org/en-US/packaging-guidelines/LicensingGuidelines/
 License:        Apache-2.0
-URL:            ...
+URL:            https://github.com/mistralai/mistral-common
 Source:         %{pypi_source mistral_common}
 
 BuildArch:      noarch
