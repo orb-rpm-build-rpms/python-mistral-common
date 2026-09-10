@@ -54,7 +54,11 @@ Summary:        %{summary}
 
 
 %check
-%pyproject_check_import
+# Exclude the experimental FastAPI server app: it imports fastapi, click and
+# pydantic_settings from the server extra, which is not packaged here (F44 has
+# no uvloop). Every other module -- image, guidance, protocol, tokenizers --
+# is still import-checked.
+%pyproject_check_import -e '*.experimental.app*'
 
 
 %files -n python3-mistral-common -f %{pyproject_files}
